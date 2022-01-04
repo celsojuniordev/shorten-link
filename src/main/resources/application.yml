@@ -1,1 +1,18 @@
+spring:
+  jpa:
+    show-sql: false
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
 
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/shorten_link?useLegacyDatetimeCode=false&serverTimezone=GMT&sessionVariables=character_set_client=utf8mb4,character_set_connection=latin1,character_set_results=utf8mb4,collation_connection=latin1_swedish_ci
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    testWhileIdle: true
+    validationQuery: SELECT 1
